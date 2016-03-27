@@ -66,7 +66,7 @@ $(document).ready(function() {
           + weather.currently.toLowerCase());
        },
        error: function(error) {
-         $("#weather").html('<p>'+error receiving weather data+'</p>');
+         $("#weather").html('error receiving weather data');
        }
     });
   }
@@ -81,7 +81,7 @@ $(document).ready(function() {
           + weather.currently.toLowerCase());
        },
        error: function(error) {
-         $("#weather").html('<p>'+error receiving weather data+'</p>');
+         $("#weather").html('error receiving weather data');
        }
     });
   }
@@ -139,7 +139,7 @@ $(document).ready(function() {
          '<br>' + weather.currently);
        },
        error: function(error) {
-         $("#weather").html('<p>'+error receiving weather data+'</p>');
+         $("#weather").html('error receiving weather data');
        }
     });
   });
