@@ -8,75 +8,77 @@
     <script src='src/scripts/simpleweather/jquery.simpleWeather.js'></script>
     <script type='text/javascript' src='src/script.js'></script>
   </head>
-  <body onload="startTime()">
-    <div class="tabs">
-      <div class="tab" id="tab1">
-        <input type="radio" id="tab-1" name="tab-group-1" checked>
-        <label for="tab-1" id="lb1">rename me!</label>
-        <div class="content">
-          <div class="contentin" id="1">
+  <body>
+    <div class="container">
+      <div class="tabs">
+        <div class="tab" id="tab1">
+          <input type="radio" id="tab-1" name="tab-group-1" checked>
+          <label for="tab-1" id="lb1">rename me!</label>
+          <div class="content">
+            <div class="contentin" id="1">
+            </div>
           </div>
         </div>
-      </div>
-      <div class="tab" id="tab2">
-        <input type="radio" id="tab-2" name="tab-group-1" checked>
-        <label for="tab-2" id="lb2">rename me!</label>
-        <div class="content">
-          <div class="contentin" id="2">
+        <div class="tab" id="tab2">
+          <input type="radio" id="tab-2" name="tab-group-1" checked>
+          <label for="tab-2" id="lb2">rename me!</label>
+          <div class="content">
+            <div class="contentin" id="2">
+            </div>
           </div>
         </div>
-      </div>
-      <div class="tab" id="tab3">
-        <input type="radio" id="tab-3" name="tab-group-1" checked>
-        <label for="tab-3" id="lb3">rename me!</label>
-        <div class="content">
-          <div class="contentin" id="3">
+        <div class="tab" id="tab3">
+          <input type="radio" id="tab-3" name="tab-group-1" checked>
+          <label for="tab-3" id="lb3">rename me!</label>
+          <div class="content">
+            <div class="contentin" id="3">
+            </div>
           </div>
         </div>
-      </div>
-      <div class="tab">
-        <input type="radio" id="tab-4" name="tab-group-1" checked>
-        <label for="tab-4">settings</label>
-        <div class="content">
-          <div class="contentin" id="settings">
-            <strong>add a link</strong><br>
-            url: <input type="text" name="link"><br>
-            link name: <input type="text" name="linkname"><br>
-            <button id="linksbutton1">add to tab 1</button>
-            <button id="linksbutton2">add to tab 2</button>
-            <button id="linksbutton3">add to tab 3</button><br><br>
-            <strong>remove a link</strong><br>
-            link name: <input type="text" name="removelinkname"><br>
-            <button id="removebutton1">remove in tab 1</button>
-            <button id="removebutton2">remove in tab 2</button>
-            <button id="removebutton3">remove in tab 3</button><br><br>
-            <strong>tabs</strong><br>
-            tab 1 name: <input type="text" name="tabinput1">
-            <button id="changetabs1">rename</button><br>
-            tab 2 name: <input type="text" name="tabinput2">
-            <button id="changetabs2">rename</button><br>
-            tab 3 name: <input type="text" name="tabinput3">
-            <button id="changetabs3">rename</button><br><br>
-            <strong>wallpaper</strong><br>
-            url: <input type="text" name="wallpaper"><br>
-            <button id="wallpaperbutton">change</button><br><br>
-            <strong>weather</strong><br>
-            city: <input type="text" name="city"><br>
-            <button id="citychange">change</button><br><br>
-            <strong>color(hex values)</strong><br>
-            include the '#'<br>
-            border: <input type="text" name="bordercolor"><br>
-            background: <input type="text" name="backgroundcolor"><br>
-            text: <input type="text" name="textcolor"><br>
-            <button id="colorchange">change</button><br><br>
+        <div class="tab">
+          <input type="radio" id="tab-4" name="tab-group-1" checked>
+          <label for="tab-4">settings</label>
+          <div class="content">
+            <div class="contentin" id="settings">
+              <strong>add a link</strong><br>
+              url: <input type="text" name="link"><br>
+              link name: <input type="text" name="linkname"><br>
+              <button id="linksbutton1">add to tab 1</button>
+              <button id="linksbutton2">add to tab 2</button>
+              <button id="linksbutton3">add to tab 3</button><br><br>
+              <strong>remove a link</strong><br>
+              link name: <input type="text" name="removelinkname"><br>
+              <button id="removebutton1">remove in tab 1</button>
+              <button id="removebutton2">remove in tab 2</button>
+              <button id="removebutton3">remove in tab 3</button><br><br>
+              <strong>tabs</strong><br>
+              tab 1 name: <input type="text" name="tabinput1">
+              <button id="changetabs1">rename</button><br>
+              tab 2 name: <input type="text" name="tabinput2">
+              <button id="changetabs2">rename</button><br>
+              tab 3 name: <input type="text" name="tabinput3">
+              <button id="changetabs3">rename</button><br><br>
+              <strong>wallpaper</strong><br>
+              url: <input type="text" name="wallpaper"><br>
+              <button id="wallpaperbutton">change</button><br><br>
+              <strong>weather</strong><br>
+              city: <input type="text" name="city"><br>
+              <button id="citychange">change</button><br><br>
+              <strong>color(hex values)</strong><br>
+              include the '#'<br>
+              border: <input type="text" name="bordercolor"><br>
+              background: <input type="text" name="backgroundcolor"><br>
+              text: <input type="text" name="textcolor"><br>
+              <button id="colorchange">change</button><br><br>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="tab">
-        <input type="radio" id="tab-4" name="tab-group-1" checked>
-        <div class="content">
-          <div class="contentin">
-            <div id='weather'></div>
+        <div class="tab">
+          <input type="radio" id="tab-4" name="tab-group-1" checked>
+          <div class="content">
+            <div class="contentin">
+              <div id='weather'></div>
+            </div>
           </div>
         </div>
       </div>
