@@ -89,21 +89,21 @@ $(document).ready(function() {
     var addlink = $("input[name=link]").val();
     var addlinkname = $("input[name=linkname]").val();
     $('#1').append("<a href='" + addlink
-     + "' id=" + addlinkname + ">" + addlinkname + "</a>");
+     + "' id=" + addlinkname + ">" + addlinkname + "</a><br>");
     localStorage.setItem('content1', $('#1').html());
   });
   $('#linksbutton2').click(function() {
     var addlink = $("input[name=link]").val();
     var addlinkname = $("input[name=linkname]").val();
     $('#2').append("<a href='" + addlink
-     + "' id=" + addlinkname + ">" + addlinkname + "</a>");
+     + "' id=" + addlinkname + ">" + addlinkname + "</a><br>");
     localStorage.setItem('content2', $('#2').html());
   });
   $('#linksbutton3').click(function() {
     var addlink = $("input[name=link]").val();
     var addlinkname = $("input[name=linkname]").val();
     $('#3').append("<a href='" + addlink
-     + "' id=" + addlinkname + ">" + addlinkname + "</a>");
+     + "' id=" + addlinkname + ">" + addlinkname + "</a><br>");
     localStorage.setItem('content3', $('#3').html());
   });
   $('#removebutton1').click(function() {
