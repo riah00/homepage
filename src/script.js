@@ -108,16 +108,19 @@ $(document).ready(function() {
   });
   $('#removebutton1').click(function() {
     var removelink = $("input[name=removelinkname]").val();
+    $('#' + removelink).next('br').remove();
     $('#' + removelink).remove();
     localStorage.setItem('content1', $('#1').html());
   });
   $('#removebutton2').click(function() {
     var removelink = $("input[name=removelinkname]").val();
+    $('#' + removelink).next('br').remove();
     $('#' + removelink).remove();
     localStorage.setItem('content2', $('#2').html());
   });
   $('#removebutton3').click(function() {
     var removelink = $("input[name=removelinkname]").val();
+    $('#' + removelink).next('br').remove();
     $('#' + removelink).remove();
     localStorage.setItem('content3', $('#3').html());
   });
