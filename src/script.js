@@ -3,29 +3,6 @@ $(document).ready(function() {
     $('body').css('background', 'url("' + localStorage.getItem('wallurl')
      + '") center center fixed');
   }
-  if(localStorage.getItem('borderco')) {
-    $('.tab label').css('border', '2px solid '
-     + localStorage.getItem('borderco'));
-    $('.content').css('border', '3px solid '
-     + localStorage.getItem('borderco'));
-    $('input[type="text"]').css('border', '2px solid '
-     + localStorage.getItem('borderco'));
-    $('[type=radio]:checked ~ label').css('border', '3px solid '
-     + localStorage.getItem('borderco'))
-  }
-  if(localStorage.getItem('backgroundco')) {
-    $('.tab label').css('background-color',
-     localStorage.getItem('backgroundco'));
-    $('.content').css('background-color',
-     localStorage.getItem('backgroundco'));
-    $('input[type="text"]').css('background-color',
-     localStorage.getItem('backgroundco'));
-    $('[type=radio]:checked ~ label').css('background-color',
-     localStorage.getItem('backgroundco'));
-  }
-  if(localStorage.getItem('textco')) {
-    $('*').css('color', localStorage.getItem('textco'));
-  }
   if(localStorage.getItem('tab1')) {
     $('#lb1').remove();
     $('#tab-1').after('<label for="tab-1" id="lb1">'
@@ -49,6 +26,29 @@ $(document).ready(function() {
   }
   if(localStorage.getItem('content3')) {
     $('#3').html(localStorage.getItem('content3'));
+  }
+    if(localStorage.getItem('borderco')) {
+    $('.tab label').css('border', '2px solid '
+     + localStorage.getItem('borderco'));
+    $('.content').css('border', '3px solid '
+     + localStorage.getItem('borderco'));
+    $('input[type="text"]').css('border', '2px solid '
+     + localStorage.getItem('borderco'));
+    $('[type=radio]:checked ~ label').css('border', '3px solid '
+     + localStorage.getItem('borderco'))
+  }
+  if(localStorage.getItem('backgroundco')) {
+    $('.tab label').css('background-color',
+     localStorage.getItem('backgroundco'));
+    $('.content').css('background-color',
+     localStorage.getItem('backgroundco'));
+    $('input[type="text"]').css('background-color',
+     localStorage.getItem('backgroundco'));
+    $('[type=radio]:checked ~ label').css('background-color',
+     localStorage.getItem('backgroundco'));
+  }
+  if(localStorage.getItem('textco')) {
+    $('*').css('color', localStorage.getItem('textco'));
   }
   $('.tabs').delay(300).fadeIn(1000);
   $('.tab label').click(function() {
