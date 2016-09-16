@@ -27,9 +27,14 @@ $(document).ready(function() {
   if(localStorage.getItem('content3')) {
     $('#3').html(localStorage.getItem('content3'));
   }
-    if(localStorage.getItem('borderco')) {
+  if(localStorage.getItem('notes')) {
+    $('#notes').html(localStorage.getItem('notes'));
+  }
+  if(localStorage.getItem('borderco')) {
     $('.tab label').css('border', '2px solid '
      + localStorage.getItem('borderco'));
+    $('button').css('border', '2px solid '
+    + localStorage.getItem('borderco'));
     $('.content').css('border', '3px solid '
      + localStorage.getItem('borderco'));
     $('input[type="text"]').css('border', '2px solid '
@@ -39,6 +44,8 @@ $(document).ready(function() {
   }
   if(localStorage.getItem('backgroundco')) {
     $('.tab label').css('background-color',
+     localStorage.getItem('backgroundco'));
+    $('button').css('background-color',
      localStorage.getItem('backgroundco'));
     $('.content').css('background-color',
      localStorage.getItem('backgroundco'));
@@ -89,38 +96,35 @@ $(document).ready(function() {
     var addlink = $("input[name=link]").val();
     var addlinkname = $("input[name=linkname]").val();
     $('#1').append("<a href='" + addlink
-     + "' id=" + addlinkname + ">" + addlinkname + "</a><br>");
+     + "' id=" + addlinkname + ">" + addlinkname + "</a>");
     localStorage.setItem('content1', $('#1').html());
   });
   $('#linksbutton2').click(function() {
     var addlink = $("input[name=link]").val();
     var addlinkname = $("input[name=linkname]").val();
     $('#2').append("<a href='" + addlink
-     + "' id=" + addlinkname + ">" + addlinkname + "</a><br>");
+     + "' id=" + addlinkname + ">" + addlinkname + "</a>");
     localStorage.setItem('content2', $('#2').html());
   });
   $('#linksbutton3').click(function() {
     var addlink = $("input[name=link]").val();
     var addlinkname = $("input[name=linkname]").val();
     $('#3').append("<a href='" + addlink
-     + "' id=" + addlinkname + ">" + addlinkname + "</a><br>");
+     + "' id=" + addlinkname + ">" + addlinkname + "</a>");
     localStorage.setItem('content3', $('#3').html());
   });
   $('#removebutton1').click(function() {
     var removelink = $("input[name=removelinkname]").val();
-    $('#' + removelink).next('br').remove();
     $('#' + removelink).remove();
     localStorage.setItem('content1', $('#1').html());
   });
   $('#removebutton2').click(function() {
     var removelink = $("input[name=removelinkname]").val();
-    $('#' + removelink).next('br').remove();
     $('#' + removelink).remove();
     localStorage.setItem('content2', $('#2').html());
   });
   $('#removebutton3').click(function() {
     var removelink = $("input[name=removelinkname]").val();
-    $('#' + removelink).next('br').remove();
     $('#' + removelink).remove();
     localStorage.setItem('content3', $('#3').html());
   });
@@ -154,11 +158,13 @@ $(document).ready(function() {
     localStorage.setItem('backgroundco', backgroundc);
     localStorage.setItem('textco', textc);
     $('.tab label').css('border', '2px solid ' + borderc);
+    $('button').css('border', '2px solid ' + borderc);
     $('.content').css('border', '3px solid ' + borderc);
     $('input[type="text"]').css('border', '2px solid ' + borderc);
     $('[type=radio]:checked ~ label').css('border', '3px solid ' + borderc)
     $('.tab label').css('background-color', backgroundc);
     $('.content').css('background-color', backgroundc);
+    $('button').css('background-color', backgroundc);
     $('input[type="text"]').css('background-color', backgroundc);
     $('[type=radio]:checked ~ label').css('background-color', backgroundc)
     $('*').css('color', textc);
@@ -180,5 +186,15 @@ $(document).ready(function() {
     $('#lb3').remove();
     $('#tab-3').after('<label for="tab-3" id="lb3">' + tabthree + '</label>');
     localStorage.setItem('tab3', tabthree);
+  });
+  $("#addnote").click(function() {
+    var note = $("input[name=note]").val();
+    $("#notes").append('<li>' + note
+     + ' <button>&#x2716;</button></li>');
+    localStorage.setItem('notes', $("#notes").html());
+  });
+  $("#notes").on('click', 'button', function() {
+    $(this).closest('li').remove();
+    localStorage.setItem('notes', $("#notes").html());
   });
 });
