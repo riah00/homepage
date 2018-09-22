@@ -25,6 +25,7 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  overflow: hidden;
 }
 strong {
   text-decoration: underline;
@@ -115,4 +116,13 @@ table {
 input[type="text"] {
   background-color: white;
   border: 2px solid black;
+}
+iframe {
+	margin-top: -320px;
+    display: block;       /* iframes are inline by default */
+    background: #000;
+    border: none;         /* Reset default border */
+    height: 1080px;      /* Viewport-relative units */
+    width: 1920px;
+	position: absolute;
 }
